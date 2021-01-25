@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="4fea8da7-9918-4563-a22f-11cb9d2b5d89" name="Heaven OVH">
+        <fileTransfer rootFolder="/var/www/azenox.fr/test/inter" accessType="SFTP" host="vps717945.ovh.net" port="22" sshConfigId="713c2ab4-8084-4955-8067-76c0e9889031" sshConfig="root@vps717945.ovh.net:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

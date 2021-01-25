@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intersection Observer API</title>
+
+
+    <style>
+        #wrapper{
+            margin-top: 2000px;
+            margin-bottom: 1000px;
+            background: aqua;
+        }
+        h1{
+            height: 300px;
+        }
+    </style>
+
+</head>
+
+
+
+<body>
+
+    <div id="wrapper">
+        <h1>Salut les gens !</h1>
+    </div>
+
+</body>
+
+
+<script src="../Observer.js"></script>
+<script>
+
+    let el = document.querySelector('#wrapper');
+    new Observer(el, (els) => {
+        Observer.filter(els).forEach((el) => {
+            el.target.style.backgroundColor = 'red';
+        });
+    });
+
+</script>
+
+
+
+</html>
