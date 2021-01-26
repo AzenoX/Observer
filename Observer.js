@@ -62,13 +62,42 @@ class Observer{
 
         =====================================*/
         let observer = new IntersectionObserver(callback, options);
+        console.log(el)
         observer.observe(element);
 
     }
 
 
-    static filter(elements){
-        return elements.filter((el) => {return el.isIntersecting});
+    static filter(elements, state = "in"){
+        //If it's an id
+        if(elements.startsWith('#')){
+            const el = document.querySelector(elements);
+
+            let arr = [];
+            if(state === "in"){
+                arr.push(elements);
+                return el.isIntersecting;
+                return (el.isIntersecting) ? arr : null;
+            }
+            else if(state === "out"){
+                arr.push(elements);
+                return "non";
+                return (!elements.isIntersecting) ? arr : null;
+            }
+            else{
+                return "surement";
+                return arr;
+            }
+        }
+        //Or
+        else{
+            return elements;
+        }
+    }
+
+
+    static in(){
+
     }
 
 
